@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Report Card System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Student Report Card System</h1>
+
+  <section class="form-section">
+    <h2>Add Student</h2>
+    <form id="studentForm">
+      <input type="text" id="name" placeholder="Student Name" required>
+
+      <div id="subjectsContainer">
+        <div class="subject-row">
+          <input type="text" class="subject" placeholder="Subject" required>
+          <input type="number" class="marks" placeholder="Marks" required>
+        </div>
+      </div>
+
+      <button type="button" onclick="addSubjectField()">+ Add Another Subject</button>
+      <br><br>
+      <button type="submit">Add Student</button>
+    </form>
+  </section>
+
+  
+  <section class="records-section">
+    <h2>All Students</h2>
+    <button onclick="loadStudents()">Load Students</button>
+    <button onclick="filterTopStudents()">Filter: Marks > 80</button>
+    <button onclick="resetData()">Reset Data</button>
+    <div id="studentList"></div>
+  </section>
+
+ 
+  <section class="search-section">
+    <h2>Search by Subject</h2>
+    <input type="text" id="searchSubject" placeholder="Enter subject...">
+    <button onclick="searchBySubject()">Search</button>
+    <div id="searchResults"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

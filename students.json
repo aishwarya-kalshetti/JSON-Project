@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "subjects": [
+      { "subjectName": "Math", "marks": 85 },
+      { "subjectName": "Science", "marks": 90 }
+    ],
+    "grade": "A"
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "subjects": [
+      { "subjectName": "Math", "marks": 70 },
+      { "subjectName": "History", "marks": 60 }
+    ],
+    "grade": "C"
+  }
+]

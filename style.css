@@ -1,0 +1,110 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7fb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.2rem;
+  color: #2c3e50;
+}
+
+h2 {
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+
+section {
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 85%;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-section, .records-section, .search-section {
+  margin-bottom: 30px;
+}
+
+
+input[type="text"], input[type="number"] {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: calc(50% - 20px);
+}
+
+.subject-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+
+button {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px 0;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+
+.student-card {
+  background: #ecf0f1;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border-left: 6px solid #3498db;
+  transition: transform 0.2s ease;
+}
+
+.student-card:hover {
+  transform: scale(1.02);
+}
+
+.student-card p {
+  margin: 5px 0;
+}
+
+.grade {
+  font-weight: bold;
+  color: #27ae60;
+}
+
+#searchResults .student-card {
+  border-left: 6px solid #e67e22;
+}
+
+
+@media (max-width: 600px) {
+  input[type="text"], input[type="number"] {
+    width: 100%;
+  }
+  
+  .subject-row {
+    flex-direction: column;
+  }
+}
