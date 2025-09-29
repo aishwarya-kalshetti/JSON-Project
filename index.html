@@ -2,46 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Report Card System</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Student Report Card System</h1>
 
-  <section class="form-section">
-    <h2>Add Student</h2>
-    <form id="studentForm">
-      <input type="text" id="name" placeholder="Student Name" required>
+  <header>
+    <div class="container">
+      <h1>🎓 Report Card System</h1>
+      <nav>
+        <a href="#add">Add Student</a>
+        <a href="#search">Search</a>
+        <a href="#controls">Controls</a>
+        <a href="#records">Records</a>
+      </nav>
+    </div>
+  </header>
 
-      <div id="subjectsContainer">
-        <div class="subject-row">
-          <input type="text" class="subject" placeholder="Subject" required>
-          <input type="number" class="marks" placeholder="Marks" required>
-        </div>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Manage Student Records with Ease </h2>
+      <p>Track subjects, marks, averages, and grades dynamically.</p>
+    </div>
+  </section>
+
+  <section id="add" class="form-section">
+    <h2> Add Student</h2>
+    <input type="text" id="studentName" placeholder="Enter student name">
+    <div id="subjectsContainer">
+      <div class="subject-row">
+        <input type="text" placeholder="Subject" class="subject">
+        <input type="number" placeholder="Marks" class="marks">
       </div>
-
-      <button type="button" onclick="addSubjectField()">+ Add Another Subject</button>
-      <br><br>
-      <button type="submit">Add Student</button>
-    </form>
+    </div>
+    <button onclick="addSubject()"> Add Subject</button>
+    <button onclick="addStudent()"> Add Student</button>
   </section>
 
-  
-  <section class="records-section">
-    <h2>All Students</h2>
-    <button onclick="loadStudents()">Load Students</button>
-    <button onclick="filterTopStudents()">Filter: Marks > 80</button>
-    <button onclick="resetData()">Reset Data</button>
-    <div id="studentList"></div>
-  </section>
-
- 
-  <section class="search-section">
-    <h2>Search by Subject</h2>
-    <input type="text" id="searchSubject" placeholder="Enter subject...">
-    <button onclick="searchBySubject()">Search</button>
+  <section id="search" class="search-section">
+    <h2>🔍 Search Student</h2>
+    <input type="text" id="searchInput" placeholder="Enter student name">
+    <button onclick="searchStudent()">Search</button>
     <div id="searchResults"></div>
   </section>
+
+  <section id="controls" class="controls">
+    <h2> Controls</h2>
+    <div class="controls-buttons">
+      <button onclick="loadStudents()"> Load Data</button>
+      <button onclick="filterTopStudents()"> Top Performers</button>
+      <button onclick="resetData()"> Reset Data</button>
+      <select onchange="sortStudents(this.value)">
+        <option value="">Sort By</option>
+        <option value="name">Name (A-Z)</option>
+        <option value="avg">Average Marks (High → Low)</option>
+      </select>
+    </div>
+  </section>
+
+  <section id="records" class="records-section">
+    <h2> Student Records</h2>
+    <div id="studentList" class="student-grid"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 Report Card System | Built with ❤️ using HTML, CSS, JS</p>
+  </footer>
 
   <script src="app.js"></script>
 </body>
