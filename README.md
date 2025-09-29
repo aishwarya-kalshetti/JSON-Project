@@ -6,11 +6,11 @@
 # Project Structure
 
 JSON-Project/
-│
-├── index.html       # Main UI
-├── style.css        # Styling for UI
-├── app.js           # JavaScript logic
-└── students.json    # Initial data file
+
+├── index.html       
+├── style.css       
+├── app.js          
+└── students.json 
 
 # Project Overview
 
