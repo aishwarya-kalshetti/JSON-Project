@@ -1,9 +1,9 @@
 # JSON-Project
 
-#Demo 
+# Demo 
+[Download and View the Demo](report-card/demo.mp4)
 
-
-#Project Structure
+# Project Structure
 
 JSON-Project/
 │
@@ -12,7 +12,7 @@ JSON-Project/
 ├── app.js           # JavaScript logic
 └── students.json    # Initial data file
 
-#Project Overview
+# Project Overview
 
 This project demonstrates how to use JSON with HTML, CSS, and JavaScript to build a simple Student Report Card System.
 It covers all major JSON concepts:
